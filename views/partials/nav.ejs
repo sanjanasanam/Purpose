@@ -1,0 +1,41 @@
+<section class="navbar">
+    <nav class="nav bd-container">
+        <div>
+            <a href="/" class="nav__logo">PURPOSE</a>
+        </div>
+
+        <div class="nav__menu" id="nav-menu">
+            <ul class="nav__list">
+                <li class="nav__item"><a href="/" class="nav__link">Home</a></li>
+                <li class="nav__item"><a href="/questions" class="nav__link">Browse a question</a></li>
+                <li class="nav__item"><a href="/contact" class="nav__link">Contact us</a></li>
+                <% if(!currUser){ %>
+                    <li class="nav__item"><a href="/login" class="nav__link">Log In</a></li>
+                    <li class="nav__item"><a href="/register" class="nav__link">Sign Up</a></li>
+                    <% } else { %>
+                        <li class="nav__item"><a href="#" class="nav__link">Signed in as <%= currUser.username %></a>
+                        </li>
+                        <li class="nav__item"><a href="/logout" class="nav__link">Log out</a></li>
+                        <% } %>
+                            <li><i class='bx bx-moon change-theme' id="theme-button"></i></li>
+            </ul>
+        </div>
+
+        <div class="nav__toggle" id="nav-toggle">
+            <i class='bx bx-menu'></i>
+        </div>
+    </nav>
+
+
+    <!-- <% if(error && error.length>0 ) { %>
+    <div class="alert alert-danger" role="alert" >
+        <%= error %><div class="cross"><i class="fas fa-times fa-xs"></i></div>
+    </div>
+    <% } %>
+
+    <% if(success && success.length>0 ) { %>
+    <div class="alert alert-success" role="alert" >
+            <%= success %><div class="cross"><i class="fas fa-times fa-xs"></i></div>
+    </div>
+    <% } %> -->
+</section>

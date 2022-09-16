@@ -1,0 +1,28 @@
+<%- include("../partials/header") %>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/edit.css" />
+    <link rel="stylesheet" type="text/css" href="/stylesheets/nav.css" />
+</head>
+<body>
+    <%- include("../partials/nav") %> 
+    <div class="container">
+        <form action="/questions/<%= question._id %>?_method=PUT" method="POST">
+            <!-- Heading -->
+            <div class="form-group">
+                <h1>Edit question</h1>
+            </div>
+            <!-- Comment-content -->
+            <div class="form-group">
+                <div>
+                    <label for="exampleInputEmail1">Question :</label>
+                </div>
+                <textarea name="description" id="" cols="10" rows="5" ><%= question.description %></textarea>
+            </div>
+            <!-- Submit button -->
+            <div class="form-group-1">
+                <button type="submit" class="button">Submit</button>
+                <a href="/questions">Go Back</a>
+            </div>
+            <!-- Link to Index page -->
+        </form>
+    </div>
+<%- include("../partials/footer") %>

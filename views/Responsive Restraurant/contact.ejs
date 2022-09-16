@@ -1,0 +1,57 @@
+<%- include("../partials/header") %>
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="stylesheets/contact.css" />
+    </head>
+
+    <body>
+        <%- include("../partials/nav") %>
+            <div id="contact-form">
+                <span id="contact-span">CONTACT</span>
+                <h1 id="heading">GET IN TOUCH</h1>
+
+                <!-- CONTACT DETAILS -->
+
+                <div id="contactOptions">
+                    <div class="contactMobile">
+                        <div class="box">
+                            <i class='bx bx1 bx-phone-call'></i>
+                            <div class="description">Phone</div>
+                            <h3>+91 1234567890</h3>
+                        </div>
+                    </div>
+
+                    <div class="contactEmail">
+                        <div class="box">
+                            <i class='bx bx1 bx-mail-send'></i>
+                            <div class="description">Email</div>
+                            <h3>sanamsanj@yahoo.com</h3>
+                        </div>
+                    </div>
+                    <div class="contactAddress">
+                        <div class="box">
+                            <i class='bx bx1 bx-current-location'></i>
+                            <div class="description">Address</div>
+                            <h3>Spoorthy - Hyderabad </h3>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <!-- FORM  -->
+                <form action="contact">
+                    <form action="">
+                        <div class="writingForm-1">
+                            <input type="text" name="" id="" placeholder="Name">
+                            <input type="text" name="" id="" placeholder="Email">
+                            <input type="text" name="" id="" placeholder="Subject">
+                        </div>
+                        <div class="writingForm-2">
+                            <textarea name="" id="" cols="30" rows="10" placeholder="Message"></textarea>
+                            <button class="btn">Submit Message</button>
+                        </div>
+                    </form>
+                </form>
+            </div>
+            <%- include("../partials/footer") %>

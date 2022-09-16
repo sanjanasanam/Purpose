@@ -1,0 +1,152 @@
+<%- include("../partials/header") %>
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="stylesheets/styles.css" />
+    </head>
+
+    <body>
+
+        <!-- SCROLL TOP -->
+        <a href="#" class="scrolltop" id="scroll-top">
+            <i class='bx bx-chevron-up scrolltop__icon'></i>
+        </a>
+
+        <!-- HEADER -->
+        <%- include("../partials/nav") %>
+
+            <main class="l-main">
+                <section class="home" id="home">
+                    <div class="home__container bd-container bd-grid">
+                        <div class="home__data">
+                            <h1 class="home__title">ANY QUERIES?</h1>
+                            <h2 class="home__subtitle">This might be the best place <br> you have come for.</h2>
+                            <a href="/questions/new" class="button">Post your question</a>
+                        </div>
+
+                        <img src="assets/img/title.svg" alt="" class="home__img">
+                    </div>
+                </section>
+
+                <!-- ABOUT -->
+                <section class="about section bd-container" id="about">
+                    <div class="about__container  bd-grid">
+                        <div class="about__data">
+                            <span class="section-subtitle about__initial">About us</span>
+                            <h2 class="section-title about__initial">We provide the best <br> queries around the globe
+                            </h2>
+                            <p class="about__description">We provide answers for your queries and find you a job if you
+                                are active in our website.</p>
+                            <a href="#" class="button">Explore history</a>
+                        </div>
+
+                        <img src="assets/img/about.jpg" alt="" class="about__img">
+                    </div>
+                </section>
+
+                <!-- SERVICES -->
+                <section class="services section bd-container" id="services">
+                    <span class="section-subtitle">Offering</span>
+                    <h2 class="section-title">Our amazing services</h2>
+
+                    <div class="services__container  bd-grid">
+                        <div class="services__content">
+                            <img class="services__img"
+                                src="https://cdn.sstatic.net/Img/home/public-qa.svg?v=d82acaa7df9f" alt="">
+                            </img>
+                            <h3 class="services__title">Public QnA</h3>
+                            <p class="services__description">We offer our clients excellent quality services for many
+                                years, with the best QnA's from all over the world.</p>
+                            <a href="#" class="button">Public QnA</a>
+                        </div>
+
+                        <div class="services__content">
+                            <img src="https://cdn.sstatic.net/Img/home/jobs.svg?v=931d6c0863ee" alt="">
+                            <h3 class="services__title">Browser Jobs</h3>
+                            <p class="services__description">Find the right job through high quality listings and search
+                                for roles based on title, technology stack, salary, location.</p>
+                            <a href="#" class="button">Browser Jobs</a>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- APP -->
+                <section class="app section bd-container">
+                    <div class="app__container bd-grid">
+                        <div class="app__data">
+                            <span class="section-subtitle app__initial">App</span>
+                            <h2 class="section-title app__initial">App is coming soon</h2>
+                            <p class="app__description">Find our application and download it, you can make your queries
+                                answered, find jobs and much more.</p>
+                            <div class="app__stores">
+                                <a href="#"><img src="assets/img/app1.png" alt="" class="app__store"></a>
+                                <a href="#"><img src="assets/img/app2.png" alt="" class="app__store"></a>
+                            </div>
+                        </div>
+
+                        <img src="assets/img/app.svg" alt="" class="app__img">
+                    </div>
+                </section>
+
+                <!-- CONTACT US -->
+                <section class="contact section bd-container" id="contact">
+                    <div class="contact__container bd-grid">
+                        <div class="contact__data">
+                            <span class="section-subtitle contact__initial">Let's talk</span>
+                            <h2 class="section-title contact__initial">Contact us</h2>
+                            <p class="contact__description">If you aren't happy what others given answers for your
+                                queries, you can contact us.</p>
+                        </div>
+
+                        <div class="contact__button">
+                            <a href="#" class="button">Contact us now</a>
+                        </div>
+                    </div>
+                </section>
+            </main>
+
+            <!-- FOOTER -->
+            <footer class="footer section bd-container">
+                <div class="footer__container bd-grid">
+                    <div class="footer__content">
+                        <a href="#" class="footer__logo">PURPOSE</a>
+                        <span class="footer__description">Education</span>
+                        <div>
+                            <a href="#" class="footer__social"><i class='bx bxl-facebook'></i></a>
+                            <a href="#" class="footer__social"><i class='bx bxl-instagram'></i></a>
+                            <a href="#" class="footer__social"><i class='bx bxl-twitter'></i></a>
+                        </div>
+                    </div>
+
+                    <div class="footer__content">
+                        <h3 class="footer__title">Services</h3>
+                        <ul>
+                            <li><a href="#" class="footer__link">Public QnA</a></li>
+                            <li><a href="#" class="footer__link">Browse Jobs</a></li>
+                            <li><a href="#" class="footer__link">Chat With Us</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer__content">
+                        <h3 class="footer__title">Information</h3>
+                        <ul>
+                            <li><a href="#" class="footer__link">Events we provide</a></li>
+                            <li><a href="#" class="footer__link">Contact us</a></li>
+                            <li><a href="#" class="footer__link">Privacy policy</a></li>
+                            <li><a href="#" class="footer__link">Terms of services</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer__content">
+                        <h3 class="footer__title">Address</h3>
+                        <ul>
+                            <li>Spoorthy</li>
+                            <li>Hyderabad</li>
+                            <li>1234567890</li>
+                            <li>sanamsanj@yahoo.com</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <p class="footer__copy">&#169; 2022 PURPOSE. All right reserved</p>
+            </footer>
+
+            <%- include("../partials/footer")%>

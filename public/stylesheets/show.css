@@ -1,0 +1,91 @@
+/* GOOGLE FONTS */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+/* body  */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.content {
+  width: 80%;
+  margin: 80px auto;
+  border: 2px solid rgb(189, 184, 184);
+  padding: 0px 50px;
+  border-radius: 5px;
+}
+.question {
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+h2 {
+  padding: 20px 0px;
+  color: #069c54;
+  font-size: 1.8rem;
+  margin: 30px 0px;
+  text-align: center;
+}
+.btn-txt {
+  text-decoration: none;
+  color: white;
+}
+.button {
+  border: none;
+  outline: none;
+}
+.que {
+  position: relative;
+}
+.right {
+  position: absolute;
+  right: 10px;
+  top: -8px;
+}
+.answer-box {
+  position: relative;
+}
+.answer {
+  padding-bottom: 25px;
+}
+.answer-box p {
+  text-align: justify;
+}
+
+.answer-box .question {
+  padding: 30px 0px;
+}
+
+.answer-box .answer {
+  padding: 30px 0px;
+  padding-top: 2px;
+}
+
+.answer-box .icons {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px 0px;
+}
+.del {
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  color: rgb(224, 33, 33);
+  font-size: 17px;
+  cursor: pointer;
+  outline: none;
+  position: absolute;
+  right: 15px;
+  bottom: 5px;
+}
+.edit {
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  color: #069c54;
+  font-size: 17px;
+  cursor: pointer;
+  outline: none;
+  position: absolute;
+  left: 0px;
+  bottom: 5px;
+}

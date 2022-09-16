@@ -1,0 +1,37 @@
+<%- include("../partials/header") %>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/login.css" />
+</head>
+<body>
+
+<header class="l-header" id="header">
+    <%- include("../partials/nav") %>
+</header>
+
+<div class="container" >
+    <div class="img-container">
+        <img class="back" src="assets/img/pc.svg" >
+    </div>
+    <div class="form">
+        <form action="/login" method="POST">
+            <div class="avt"><img class="avatar" src="assets/img/gpic.svg"></div>
+            <div class="head"><h2>Welcome</h2></div>
+            <div class="form-group">
+                <input class="input" name="username" autocomplete="off" type="text" required>
+                <label for="username">
+                    <span class="label"><i class="fas fa-user"></i>  Username</span>
+                </label>
+            </div>
+            <div class="form-group">
+                <input class="input" name="password" autocomplete="off" type="password" required>
+                <label for="password">
+                    <span class="label"><i class="fas fa-lock"></i>  Password</span>
+                </label>
+            </div>
+            <input type="hidden" name="referer" value=<%= referer %>>
+            <input type="submit" class="btn" value="Login">
+        </form>
+    </div>
+</div>
+
+
+<%- include("../partials/footer")%>

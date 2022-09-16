@@ -1,0 +1,59 @@
+<%- include("../partials/header") %>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/home.css" />
+    <link rel="stylesheet" type="text/css" href="/stylesheets/nav.css" />
+</head>
+<body >
+    <%- include("../partials/nav") %>
+    <h3 class="heading-3">Related Questions for "<%= filter %>"</h3>
+    <section>
+        <div class="questions">
+            <% questions.forEach(function(question){ %>
+
+                <% if(filter === "answered"){ %>
+                    <% if(question.answers.length > 0){ %>
+                        <div class="boxes">
+                            <h4><%= question.author.username %>,<span class="light"> <%- moment(question.createdAt).fromNow() %></span></h4>
+                            <p class="box"><%= question.description %></p>
+                            <a href="/questions/<%= question._id %>"><button class="btn">Answers</button></a>
+                            <% if(currUser && currUser.username === question.author.username){ %>
+                            <a href="/questions/<%= question._id %>/edit" class="edit">Edit</a>
+                            <% } %>
+                        </div>
+                    <% } %>
+                <% } else if(filter === "pending"){ %>
+                    <% if(question.answers.length === 0){ %>
+                        <div class="boxes">
+                            <h4><%= question.author.username %>,<span class="light"> <%- moment(question.createdAt).fromNow() %></span></h4>
+                            <p class="box"><%= question.description %></p>
+                            <a href="/questions/<%= question._id %>"><button class="btn">Answers</button></a>
+                            <% if(currUser && currUser.username === question.author.username){ %>
+                            <a href="/questions/<%= question._id %>/edit" class="edit">Edit</a>
+                            <% } %>
+                        </div>
+                    <% } %>
+                <% } else {  %>
+                    <% if(question.description.includes(filter)){ %>
+                        <div class="boxes">
+                            <h4><%= question.author.username %>,<span class="light"> <%- moment(question.createdAt).fromNow() %></span></h4>
+                            <p class="box"><%= question.description %></p>
+                            <a href="/questions/<%= question._id %>"><button class="btn">Answers</button></a>
+                            <% if(currUser && currUser.username === question.author.username){ %>
+                            <a href="/questions/<%= question._id %>/edit" class="edit">Edit</a>
+                            <% } %>
+                        </div>
+                    <% } %>
+                <% } %>
+                
+            <% }) %>
+        </div>
+    </section>
+    <!--SCROLL REVEAL-->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- MAIN JS -->
+    <script src="assets/js/main.js"></script>
+
+    <script type="text/javascript" src="JS/home.js"></script>
+<%- include("../partials/footer") %>
+
+<!-- Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat aperiam nam non molestias eveniet, illum maxime voluptatibus consectetur neque placeat soluta adipisci, harum fugit nobis, ipsum minima recusandae. Quod culpa ad molestias temporibus ipsam, tempore dolorum. Dolorum sapiente libero soluta, voluptatum assumenda est fuga aliquam ullam eligendi ipsum doloremque reiciendis explicabo molestias, similique ex asperiores autem nostrum ab. Consequatur, quisquam id. Nisi id, cum inventore veritatis quod, non iure illo, adipisci voluptatum ex consequuntur. Dolorem vero repellendus tempore reprehenderit accusantium laudantium deserunt a in! Quod maiores repellat sunt ex quisquam repellendus fugit autem laboriosam perspiciatis similique, explicabo nemo possimus doloremque. -->

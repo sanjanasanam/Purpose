@@ -1,0 +1,34 @@
+<%- include("../partials/header")%>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/show.css">
+	<link rel="stylesheet" type="text/css" href="/stylesheets/nav.css">
+</head>
+<body>
+    <%- include("../partials/nav") %>
+	<section class="content">
+        <h2>Results</h2><hr>
+		<div class="que">
+			<h3 class="question">
+				<%= post.description %>
+			</h3>
+			<% if(currUser && currUser.username !== post.author.username){ %>
+			<button class="button right">
+				<a class="btn-txt" href="/questions/<%= post._id %>/answer/new">Add Answer</a>
+			</button>
+			<% } %>
+		</div>
+        
+		
+		<% post.answers.forEach(function(answer){ %>
+			<div class="answer-box">
+				<h4><%= answer.author.username %>,<span class="light"> <%- moment(answer.createdAt).fromNow() %></span></h4>
+				<p class="answer"><%= answer.Text %></p>
+				<% if(currUser && currUser.username === answer.author.username || currUser && currUser.isAdmin){ %>
+					<a href="/questions/<%= post._id %>/answer/<%= answer._id %>/edit" class="edit">Edit</a>
+					<form action="/questions/<%= post._id %>/answer/<%= answer._id %>?_method=DELETE" method="POST">
+						<button class="del" type="submit">Delete</button>
+					</form>
+				<% } %>
+			</div>
+		<% }) %>
+    </section>
+<%- include("../partials/footer")%>

@@ -1,0 +1,43 @@
+<%- include("../partials/header") %>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/register.css" />
+    </head>
+
+    <body>
+
+        <%- include("../partials/nav") %>
+
+            <div class="container">
+                <div class="img-container">
+                    <img class="back" src="assets/img/study.svg">
+                </div>
+                <div class="form">
+                    <form action="/register" method="POST">
+                        <div class="avt"><img class="avatar" src="assets/img/gpic.svg"></div>
+                        <div class="head">
+                            <h2>Get Started!</h2>
+                        </div>
+                        <div class="form-group">
+                            <input class="input" name="username" autocomplete="off" type="text" required>
+                            <label for="college">
+                                <span class="label"><i class="fas fa-graduation-cap"></i> Name</span>
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <input class="input" name="email" autocomplete="off" type="email" required>
+                            <label for="email">
+                                <span class="label"><i class="fas fa-envelope"></i> Email</span>
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <input class="input" name="password" autocomplete="off" type="password" required>
+                            <label for="password">
+                                <span class="label"><i class="fas fa-lock-open"></i> Password</span>
+                            </label>
+                        </div>
+                        <input type="submit" class="btn" value="Register">
+                        <input type="hidden" name="referer" value=<%=referer %>>
+                    </form>
+                </div>
+            </div>
+
+            <%- include("../partials/footer")%>

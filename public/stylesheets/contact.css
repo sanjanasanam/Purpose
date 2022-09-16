@@ -1,0 +1,155 @@
+/* GOOGLE FONTS */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+/* body  */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+/* CONTACT FORM  */
+
+#contact-form {
+  padding: 30px;
+}
+.nav {
+  line-height: calc(var(--header-height) + 1.5rem);
+}
+
+#contactOptions {
+  margin: 0 auto;
+  margin-top: 3vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+}
+
+.contactMobile {
+  border: 2px solid #069c54;
+  border-radius: 0.5rem;
+  padding: 50px 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.contactMobile:hover {
+  background-color: #069c54;
+  color: white;
+}
+.contactMobile:hover .bx1 {
+  color: white;
+}
+
+.contactEmail {
+  border: 2px solid #069c54;
+  border-radius: 0.5rem;
+  padding: 50px 57px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.contactEmail:hover {
+  background-color: #069c54;
+  color: white;
+}
+.contactEmail:hover .bx1 {
+  color: white;
+}
+
+.contactAddress {
+  border: 2px solid #069c54;
+  border-radius: 0.5rem;
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.contactAddress:hover {
+  background-color: #069c54;
+  color: white;
+}
+.contactAddress:hover .bx1 {
+  color: white;
+}
+
+/* ICONS STYLES  */
+.bx1 {
+  font-size: 2.9rem;
+  color: #069c54;
+}
+
+/* CONTACT FORM FONTS  */
+
+#contact-span {
+  color: #069c54;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+}
+
+form .writingForm-1 {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+
+form .writingForm-1 input {
+  box-shadow: 1.6px 2.5px 1.4px rgba(0, 0, 0, 0.05);
+  border: 2px solid rgb(189, 184, 184);
+  padding: 10px;
+  margin: 20px;
+  font-size: 1.2rem;
+  border-radius: 0.5rem;
+  outline: none;
+}
+
+form .writingForm-2 {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  margin: 20px;
+}
+
+form .writingForm-2 textarea {
+  padding: 20px;
+  box-shadow: 1.6px 2.5px 1.4px rgba(0, 0, 0, 0.1);
+  border: 2px solid rgb(189, 184, 184);
+  height: 180px;
+  font-size: 1.2rem;
+  border-radius: 0.5rem;
+  outline: none;
+}
+
+form button {
+  margin-top: 10px;
+  background-color: #069c54;
+  width: 150px;
+  outline: none;
+  padding: 10px;
+  align-self: flex-end;
+  border-radius: 30px;
+  border: 2px solid #069c54;
+  color: azure;
+  font-size: 0.9rem;
+}
+
+form button:hover {
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  font-weight: bold;
+}
